@@ -49,17 +49,17 @@ function validar(){
         instancias.push(datosInput);
         datosInput.crearDiv(datosInput);
         inputTarea.value="";
+        inputTarea.focus();
+
     }else{
         alert("Ingrese una tarea");
     }
 }
-agregar.addEventListener("click", function(){
-    validar()
-})
 inputTarea.addEventListener("keyup", function(e){
     if(e.key=="Enter"){
        validar();
     }
 })
+agregar.addEventListener("click", validar);
 
 
