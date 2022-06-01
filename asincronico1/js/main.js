@@ -61,5 +61,3 @@ inputTarea.addEventListener("keyup", function(e){
     }
 })
 agregar.addEventListener("click", validar);
-
-
