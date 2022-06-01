@@ -1,5 +1,3 @@
-
-//let itemInput=document.querySelector(".item-input");
 let container=document.querySelector(".container");
 let inputTarea=document.querySelector("#input");
 let agregar=document.querySelector(".btn-agregar");
@@ -45,33 +43,22 @@ let instancias=[];
         }
     }
 } 
-
-agregar.addEventListener("click", function(){
+function validar(){
     if(!inputTarea.value==""){
         let datosInput= new Item(inputTarea.value);
         instancias.push(datosInput);
-        console.log(datosInput);
-        console.log(instancias);
         datosInput.crearDiv(datosInput);
         inputTarea.value="";
-
     }else{
         alert("Ingrese una tarea");
     }
+}
+agregar.addEventListener("click", function(){
+    validar()
 })
 inputTarea.addEventListener("keyup", function(e){
     if(e.key=="Enter"){
-        if(!inputTarea.value==""){
-            let datosInput= new Item(inputTarea.value);
-            instancias.push(datosInput);
-            console.log(datosInput);
-            console.log(instancias);
-            datosInput.crearDiv(datosInput);
-            inputTarea.value="";
-    
-        }else{
-            alert("Ingrese una tarea");
-        }
+       validar();
     }
 })
 
