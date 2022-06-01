@@ -50,7 +50,6 @@ function validar(){
         datosInput.crearDiv(datosInput);
         inputTarea.value="";
         inputTarea.focus();
-
     }else{
         alert("Ingrese una tarea");
     }
